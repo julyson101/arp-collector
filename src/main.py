@@ -1,6 +1,29 @@
+import yaml
+from arp_collector import collect_arp
+
+
+INVENTORY_FILE = "inventory/devices.yml"
+OUTPUT_FILE = "output/arp_output.txt"
+
+
+def load_devices():
+    with open(INVENTORY_FILE, "r") as f:
+        return yaml.safe_load(f)["devices"]
+
+
 def main():
-    print("Network automation project started")
-    print("This is the second line")
+    devices = load_devices()
+
+    with open(OUTPUT_FILE, "w") as outfile:
+        for device in devices:
+            arp_output = collect_arp(device)
+
+            outfile.write(f"\n===== {device['name']} =====\n")
+            outfile.write(arp_output)
+            outfile.write("\n")
+
+    print("ARP collection completed successfully")
+            
 
 if __name__ == "__main__":
     main()

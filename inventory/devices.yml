@@ -1,0 +1,12 @@
+devices:
+  - name: Agg01
+    host: 100.127.0.13
+    device_type: cisco_ios
+    username: july
+    password: jks!034L
+
+  - name: Agg02
+    host: 100.127.0.14
+    device_type: cisco_ios
+    username: july
+    password: jks!034L

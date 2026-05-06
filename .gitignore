@@ -1,6 +1,24 @@
-arpc-venv/
+# Python
 __pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+arpc-venv/
+venv/
+
+# Secrets / inventory
+inventory/devices.yml
+
+# Logs
 *.log
+
+# Editor
+.vscode/
+.idea/
+
+# Output / others
 output/
 .env
 

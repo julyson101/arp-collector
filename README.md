@@ -17,3 +17,7 @@ A Python-based network automation tool that connects to network devices via ssh 
 git close https://github.com/julyson101/arp-collector.git
 cd arp-collector
 
+## To run
+go to project folder: /arp-collector/
+activate virtual environment: source arpc-venv/bin/activate
+run the code: python3 src/main.py

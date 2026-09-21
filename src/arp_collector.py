@@ -1,21 +1,20 @@
 from netmiko import ConnectHandler
 
 
-def collect_arp(device):
+def collect_arp(device, username, password):
     """
-    Connects to a device and retrieves ARP table
+    Connects to a network device and retrieves ARP table.
     """
     print(f"Connecting to {device['name']} ({device['host']})")
 
     connection = ConnectHandler(
             device_type=device["device_type"],
             host=device["host"],
-            username=device["username"],
-            password=device["password"],
+            username=username,
+            password=password,
     )
 
-    output = connection.send_command("show arp")
-    connection.disconnect()
-
-    return output
-
+    try:
+        return connection.send_command("show arp")
+    finally: 
+        connection.disconnect()

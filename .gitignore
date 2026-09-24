@@ -4,6 +4,9 @@ __pycache__
 *.pyo
 *.pyd
 
+# Python package metadata
+*.egg-info/
+
 # Virtual Environment
 arpc-venv/
 venv/

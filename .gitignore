@@ -1,5 +1,5 @@
 # Python
-__pycache__
+__pycache__/
 *.pyc
 *.pyo
 *.pyd
@@ -7,12 +7,12 @@ __pycache__
 # Python package metadata
 *.egg-info/
 
+# Testing
+.pytest_cache/
+
 # Virtual Environment
 arpc-venv/
 venv/
-
-# Secrets / inventory
-inventory/devices.yml
 
 # Logs
 *.log
@@ -24,4 +24,3 @@ inventory/devices.yml
 # Output / others
 output/
 .env
-

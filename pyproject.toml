@@ -6,6 +6,16 @@ build-backend = "setuptools.build_meta"
 name = "arp-collector"
 version = "0.1.0"
 requires-python = ">=3.12"
+dependencies = [
+    "netmiko==4.6.0",
+    "PyYAML==6.0.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+    "ruff==0.16.8",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -16,4 +26,3 @@ line-length = 88
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F", "I"]
-
